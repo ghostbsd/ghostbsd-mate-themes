@@ -26,10 +26,10 @@ style "murrine-default" {
 
 	GtkImage::x-ayatana-indicator-dynamic = 1
 
-	GtkMenu::horizontal-padding = 0
-	GtkMenu::vertical-padding = 0
+	GtkMenu::horizontal-padding = 3
+	GtkMenu::vertical-padding = 3
 
-	GtkMenuBar::internal-padding = 0
+	GtkMenuBar::internal-padding = 3
 	GtkMenuBar::window-dragging = 1
 
 	GtkMenuItem::arrow-scaling= 0.5
