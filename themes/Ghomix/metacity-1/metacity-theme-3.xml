@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-	<name>gnomix</name>
+	<name>Ghomix</name>
 	<author>Satyajit Sahoo</author>
 	<copyright>GPL-3.0+</copyright>
 	<date>11 December 2013</date>
-	<description>Numix Mutter Theme</description>
+	<description>Ghomix Mutter Theme</description>
 </info>
 
 <!-- ::: CONSTANTS ::: -->
@@ -30,7 +30,7 @@
 	<distance name="right_titlebar_edge" value="4" />
 	<distance name="title_vertical_pad" value="0" />
 	<aspect_ratio name="button" value="1.0" />
-	<border name="title_border" left="10" right="10" top="8" bottom="8" />
+	<border name="title_border" left="10" right="10" top="6" bottom="6" />
 	<border name="button_border" left="0" right="0" top="0" bottom="0" />
 </frame_geometry>
 
@@ -733,15 +733,15 @@
 </draw_ops>
 
 <draw_ops name="unshade_focused_pressed">
-	<line 
+	<line
 		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+1"
 		x2="(width-width%3)/3" y2="height-(height-height%3)/3-5"
 		color="C_icons_focused_pressed" />
-	<line 
+	<line
 		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+2"
 		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-5"
 		color="C_icons_focused_pressed" />
-	<line 
+	<line
 		x1="width-(width-width%3)/3-7" y1="(height-height%3)/3+1"
 		x2="(width-width%3)/3" y2="height-(height-height%3)/3-6"
 		color="C_icons_focused_pressed" />
@@ -749,16 +749,16 @@
 		x1="(width-width%3)/3+3" y1="(height-height%3)/3+1"
 		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-5"
 		color="C_icons_focused_pressed" />
-	<line 
+	<line
 		x1="(width-width%3)/3+3" y1="(height-height%3)/3+2"
 		x2="width-(width-width%3)/3-4" y2="height-(height-height%3)/3-5"
 		color="C_icons_focused_pressed" />
 	<line
 		x1="(width-width%3)/3+4" y1="(height-height%3)/3+1"
 		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-6"
-		color="C_icons_focused_pressed" /> 
-	<rectangle 
-		x="(width-width%3)/3+3" y="height/2-2" 
+		color="C_icons_focused_pressed" />
+	<rectangle
+		x="(width-width%3)/3+3" y="height/2-2"
 		width="width-2*(width-width%3)/3-8" height="6" filled="true"
 		color="C_icons_focused_pressed" />
 </draw_ops>

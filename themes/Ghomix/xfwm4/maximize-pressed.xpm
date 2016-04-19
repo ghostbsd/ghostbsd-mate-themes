@@ -1,9 +1,9 @@
 /* XPM */
-static char * maximize_pressed_xpm[] = {
+static char * maximize_prelight_xpm[] = {
 "24 24 3 1",
 " 	c None",
 ".	c #2D2D2D",
-"+	c #1793CF",
+"+	c #D64937 s active_color_1",
 "........................",
 "........................",
 "........................",
