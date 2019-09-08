@@ -8,5 +8,5 @@ Encoding=UTF-8
 GtkTheme=Vimix-Light
 MetacityTheme=Vimix-Light
 IconTheme=Vivacious-Colors
-CursorTheme=Mate
+CursorTheme=Adwaita
 ButtonLayout=menu:minimize,maximize,close
