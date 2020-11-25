@@ -7,6 +7,6 @@ Encoding=UTF-8
 [X-GNOME-Metatheme]
 GtkTheme=Vimix-Dark
 MetacityTheme=Vimix-Dark
-IconTheme=Vivacious-Colors-Full-Dark
+IconTheme=Qogir-dark
 CursorTheme=Adwaita
 ButtonLayout=menu:minimize,maximize,close
