@@ -10,29 +10,22 @@
 
 
 <!-- CONSTANTS -->
-<constant name="C_titlebar" value="#444444" />
-<constant name="C_titlebar_unfocused" value="#444444" />
-<constant name="C_border_focused" value="#444444" />
-<constant name="C_border_unfocused" value="#444444" />
+<constant name="C_titlebar" value="#383838" />
+<constant name="C_titlebar_unfocused" value="#383838" />
+<constant name="C_border_focused" value="#383838" />
+<constant name="C_border_unfocused" value="#383838" />
+<constant name="C_highlight_focused" value="#525252" />
+<constant name="C_highlight_unfocused" value="#525252" />
 <constant name="C_title_focused" value="#f5f5f5" />
 <constant name="C_title_unfocused" value="#dedede" />
-
-<constant name="C_wm_button_background" value="#444444" />
-<constant name="C_wm_button_foreground" value="#444444" />
-<constant name="C_wm_button_unfocused" value="#444444" />
-
-<constant name="C_close_button" value="#787878" />
-<constant name="C_maximize_button" value="#787878" />
-<constant name="C_restore_button" value="#787878" />
-<constant name="C_minimize_button" value="#787878" />
 
 <!-- GEOMETRY -->
 
 <!-- Focused window -->
 <frame_geometry name="normal" title_scale="medium" rounded_top_left="2" rounded_top_right="2">
-	<distance name="left_width" value="1" />
-	<distance name="right_width" value="1" />
-	<distance name="bottom_height" value="1" />
+	<distance name="left_width" value="2" />
+	<distance name="right_width" value="2" />
+	<distance name="bottom_height" value="2" />
 	<distance name="left_titlebar_edge" value="10" />
 	<distance name="right_titlebar_edge" value="0" />
 	<distance name="title_vertical_pad" value="4" />
@@ -43,9 +36,9 @@
 
 <!-- Unfocused window -->
 <frame_geometry name="normal_unfocused" title_scale="medium" rounded_top_left="2" rounded_top_right="2" parent="normal" >
-	<distance name="left_width" value="1" />
-	<distance name="right_width" value="1" />
-	<distance name="bottom_height" value="1" />
+	<distance name="left_width" value="2" />
+	<distance name="right_width" value="2" />
+	<distance name="bottom_height" value="2" />
 	<distance name="left_titlebar_edge" value="10"/>
 	<distance name="right_titlebar_edge" value="0"/>
 	<distance name="title_vertical_pad" value="4" />
@@ -117,9 +110,9 @@
 
 <frame_geometry name="attached" title_scale="medium" hide_buttons="true" rounded_top_left="false" rounded_top_right="false" parent="normal">
 	<distance name="title_vertical_pad" value="8"/>
-	<distance name="bottom_height" value="1"/>
-	<distance name="left_width" value="1"/>
-	<distance name="right_width" value="1"/>
+	<distance name="bottom_height" value="0"/>
+	<distance name="left_width" value="0"/>
+	<distance name="right_width" value="0"/>
 </frame_geometry>
 
 
@@ -172,11 +165,11 @@
 </draw_ops>
 
 <draw_ops name="border_focused">
-	<rectangle color="C_border_focused" x="0" y="0" width="width-1" height="height-1" filled="false" />
+	<rectangle color="C_highlight_focused" x="0" y="0" width="width-1" height="height-1" filled="false" />
 </draw_ops>
 
 <draw_ops name="border_unfocused">
-	<rectangle color="C_border_unfocused" x="0" y="0" width="width-1" height="height-1" filled="false" />
+	<rectangle color="C_highlight_unfocused" x="0" y="0" width="width-1" height="height-1" filled="false" />
 </draw_ops>
 
 <draw_ops name="rounded_border_focused">
@@ -207,28 +200,28 @@
 	<line
 		x1="width-1" y1="0"
 		x2="width-1" y2="height"
-		color="C_border_focused" />
+		color="C_titlebar" />
 </draw_ops>
 
 <draw_ops name="border_right_unfocused">
 	<line
 		x1="width-1" y1="0"
 		x2="width-1" y2="height"
-		color="C_border_unfocused" />
+		color="C_titlebar_unfocused" />
 </draw_ops>
 
 <draw_ops name="border_left_focused">
 	<line
 		x1="0" y1="0"
 		x2="0" y2="height"
-		color="C_border_focused" />
+		color="C_titlebar" />
 </draw_ops>
 
 <draw_ops name="border_left_unfocused">
 	<line
 		x1="0" y1="0"
 		x2="0" y2="height"
-		color="C_border_unfocused" />
+		color="C_titlebar_unfocused" />
 </draw_ops>
 
 <!-- BUTTON ICONS -->
@@ -455,9 +448,9 @@
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_focused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_focused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_focused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_focused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_focused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_focused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_focused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_focused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_focused_pressed" />
@@ -488,9 +481,9 @@
 	<button function="close" state="normal" draw_ops="close_unfocused" />
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_unfocused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_unfocused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_unfocused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_focused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_focused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_focused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_unfocused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_unfocused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_unfocused_pressed" />
@@ -521,9 +514,9 @@
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_focused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_focused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_focused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_focused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_focused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_focused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_focused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_focused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_focused_pressed" />
@@ -555,9 +548,9 @@
 	<button function="close" state="normal" draw_ops="close_unfocused" />
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_unfocused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_unfocused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_unfocused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_focused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_focused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_focused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_unfocused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_unfocused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_unfocused_pressed" />

@@ -5975,7 +5975,7 @@ menuitem calendar iconview {
 
 #PanelPlug,
 PanelToplevel.background {
-  background-color: #eeeeee;
+  background-color: rgba(238, 238, 238, 0.9);
   color: rgba(0, 0, 0, 0.8);
   font-weight: 500;
 }
