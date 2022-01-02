@@ -6057,11 +6057,6 @@ PanelApplet.wnck-applet .wnck-pager:selected {
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-na-tray-applet {
-  -NaTrayApplet-icon-padding: 3px;
-  -NaTrayApplet-icon-size: 16;
-}
-
 .mate-panel-menu-bar {
   -PanelMenuBar-icon-visible: true;
 }
