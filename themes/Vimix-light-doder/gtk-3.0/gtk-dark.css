@@ -4910,6 +4910,11 @@ window.background.csd.unified.fullscreen > decoration-overlay {
   color: white;
 }
 
+/* caret-color is inherited, so the rename entry would get the desktop's white caret */
+.caja-desktop.view .entry {
+  caret-color: currentColor;
+}
+
 filechooser placessidebar.sidebar separator,
 filechooser placessidebar.sidebar .separator,
 .nautilus-window placessidebar.sidebar separator,
